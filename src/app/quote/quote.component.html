@@ -2,9 +2,14 @@
     <h1>Quotes</h1>
     <hr>
     <ul>
-      <li *ngFor='let quote of quotes'>
+      <li *ngFor='let quote of quotes let i = index'>
         {{quote.quote}}
-        <app-quote-detail [quote]='quote'></app-quote-detail>
+       <app-quote-detail  [quote]='quote'(toDelete) = 'deleteQuote($event,i)'></app-quote-detail>
+  
+       <button class="btn btn-primary" (click)="upvote(i)">Upvote</button><br>
+       <button class="btn" (click)="downvote(i)">Downvote</button><br>
+       <button (click)= 'quoteComplete(true)'>Delete</button>
+  
       </li>
     </ul>
   </div>
