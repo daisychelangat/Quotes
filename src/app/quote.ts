@@ -1,4 +1,3 @@
-
 export class Quote {
   public upvotes : number;
   public downvotes :number;
@@ -7,4 +6,3 @@ export class Quote {
     this.downvotes=0;
   }
     }
-  
