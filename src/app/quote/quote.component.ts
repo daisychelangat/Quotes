@@ -12,20 +12,20 @@ quotes:Quote[]=[
 
 ];
 
-deleteQuote(toDelete:any, index:any){
+deleteQuote(toDelete, index){
    if (toDelete) {
      this.quotes.splice(index,1);
    }
  }
- upvote(i:any){
+ upvote(i){
       this.quotes[i].upvotes+=1
   }
-downvote(i:any){
+downvote(i){
     this.quotes[i].downvotes+=1
   }
- originalNum:any
- lastNum:any
- counter:any
+ originalNum:number
+ lastNum:number
+ counter:number
 
  highestUpvote(){
    this.originalNum = 0
@@ -37,7 +37,7 @@ downvote(i:any){
    }
    return  this.originalNum
  }
- addNewQuote(quote:any){
+ addNewQuote(quote){
    let quoteLength = this.quotes.length;
 
    quote.completeDate = new Date(quote.completeDate)
